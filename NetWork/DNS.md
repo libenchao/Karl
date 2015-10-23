@@ -1,7 +1,7 @@
 # DNS查找
 dns的查找是一个递归的过程，如果当前查找的dns服务器不知道要查找的域名，他就会向他的上级询问。而且，dns都有缓存功能，所以，并不是每次查找都要走一条完整路径。
 
-Linux/Unix的dns工具是host，例如：
+Linux/Unix的dns工具是***host***，例如：
 
     libenchao@libenchao-Vostro-3900:~$ host -a -v baidu.com
     Trying "baidu.com"
