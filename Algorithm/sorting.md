@@ -113,7 +113,7 @@
 
 归并排序是稳定的。
 
-    void merge(int *arr, int mid, int n) {
+    static void merge(int *arr, int mid, int n) {
         int *buf = malloc(sizeof(int) * n);
     
         for (int i = 0; i < n; ++i) {
@@ -147,7 +147,7 @@
 
 快速排序还存在很多种优化，其中一种就是三相快速排序。时间和空间复杂度都比两向的快速排序优。一开始是可以遍历数组找到中位数进行划分，后来是找三个数，取三者的中值进行划分，效率较好。
 
-    int partition(int *arr, int n) {
+    static int partition(int *arr, int n) {
         int mid = *arr;
     
         int *left = arr+1, *right = arr+n-1;
@@ -182,13 +182,13 @@
 
 堆排序是不稳定的。
 
-    void swap(int *x, int *y) {
+    static void swap(int *x, int *y) {
         int tmp = *x;
         *x = *y;
         *y = tmp;
     }
     
-    void sink(int *arr, int s, int n) {
+    static void sink(int *arr, int s, int n) {
         int son = (s << 1) + 1;
         while (son < n) {
             if (son + 1 < n && *(arr+son+1) > *(arr+son)) son++;
