@@ -9,6 +9,8 @@
 
 但是这种方式删除元素的时候比较麻烦，需要把当前要删除的元素的后面的所有元素都重新插入哈希表中。
 
+### 实际使用
+
 java中的map提供两种：java.util.TreeMap是用的红黑树实现的；java.util.HashMap用的是基于链表的hash实现。
 
 C++中一开始只支持基于红黑树的<set>、<map>；到了C++11之后开始支持<unordered_map>、<unordered_set>两种基于hash的结构。
